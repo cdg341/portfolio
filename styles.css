@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   font-family: "space Mono", monospace;
-  font-weight: 700;
   font-size: 18px;
   color: white;
 }
@@ -60,6 +59,10 @@ header a:hover {
   font-size: 2.5rem;
 }
 
+.section-1 h2 {
+  font-size: 1.8rem;
+}
+
 .section-1 span {
   color: aquamarine;
   font-size: 2.5rem;
@@ -91,8 +94,30 @@ header a:hover {
   width: 300px;
 }
 
+.one div p {
+  width: 300px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.one img {
+  margin-bottom: 30px;
+}
+
 p {
   margin-top: 10px;
+}
+
+.box {
+  padding: 25px;
+  box-shadow: 0 0 5px gray;
+  border-radius: 8px;
+}
+
+.one {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 .skills {
@@ -114,24 +139,27 @@ p {
   padding: 15px 50px;
   border-radius: 8px;
   margin-right: 20px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.projects > h1 {
+  text-shadow: 0 0 10px lightgray;
 }
 
 .projects h1 {
   font-size: 1.5rem;
   color: aquamarine;
-  text-shadow: 0 0 10px lightgray;
   margin-bottom: 10px;
+  margin-top: -15px;
 }
 
 .project-1,
-.project-2,
-.project-3,
 .project-4,
-.project-5 {
+.project-5,
+.project-6 {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 50px;
-  padding: 50px 200px;
+  padding: 50px 0px;
 }
 
 .project-1 p:nth-child(2) {
@@ -140,7 +168,7 @@ p {
 
 .project-images p {
   width: 500px;
-  margin: 0;
+  margin-bottom: 10px;
   padding: 0;
   font-size: 16px;
 }
@@ -154,4 +182,50 @@ p {
 .projects img:hover {
   transform: scale(1.1);
   transition: 0.2s;
+}
+
+.buttons {
+  padding: 0 15px;
+  border: 2px solid aquamarine;
+  color: black;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background-color: white;
+}
+
+.buttons:hover {
+  background-color: #111827;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0 5px lightgray;
+}
+
+.contact {
+  text-align: center;
+  background-color: #1e2a44;
+  padding: 10px 0;
+}
+
+.contact div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact h1 {
+  font-size: 1.5rem;
+  color: aquamarine;
+  text-shadow: 0 0 10px lightgray;
+  margin-bottom: 10px;
+  margin-top: 80px;
+}
+
+.contact img {
+  width: 70%;
+}
+
+.contact p {
+  margin: 0;
 }
