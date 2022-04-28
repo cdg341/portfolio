@@ -9,11 +9,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="/fade-in-out-on-scroll/assets/css/main.css" />
     <title>Cameron Gooch | Front End Developer</title>
   </head>
   <body>
-    <header class="header">
+    <!-- Navbar -->
+    <navbar>
       <img src="logo-removebg-preview.png" alt="" />
       <div>
         <a href="javascript:void(0)">About</a>
@@ -21,15 +21,15 @@
         <a href="javascript:void(0)">Projects</a>
         <a href="javascript:void(0)">Contact</a>
       </div>
-    </header>
-    <div class="container">
-      <div class="section-1 item scrollFade">
-        <div>
-          <h1>
-            Hello my name is <span>Cameron</span>.
-            <h2>Front-end Web Developer</h2>
-          </h1>
-        </div>
+    </navbar>
+
+    <!-- About Section -->
+    <section class="container">
+      <div class="my-name item scrollFade">
+        <h1>
+          Hello my name is <span>Cameron</span>.
+          <h2>Front-end Web Developer</h2>
+        </h1>
       </div>
       <div class="about item scrollFade">
         <div class="about-txt">
@@ -43,116 +43,115 @@
             aperiam cum voluptatum sint doloremque, sit blanditiis sed adipisci esse qui nisi et.
           </p>
         </div>
-        <img id="me" src="4043279-afro-avatar-male-man_113244.svg" alt="" />
+        <img class="profile-pic" src="4043279-afro-avatar-male-man_113244.svg" alt="" />
       </div>
-      <div class="section-2 item scrollFade">
-        <h1>Skills</h1>
-        <hr />
-        <div class="skills" id="">
-          <div class="skills-1"><img src="/icons/html.png" alt="" /></div>
-          <div class="skills-2"><img src="/icons/css.png" alt="" /></div>
-          <div class="skills-3"><img src="/icons/js.png" alt="" /></div>
-          <div class="skills-4"><img src="/icons/pngwing.com(1).png" alt="" /></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="item scrollFade">
+      <div class="container">
+        <div class="skills-header">
+          <h1>Skills</h1>
         </div>
       </div>
-      <div class="projects item scrollFade">
-        <h1>Projects</h1>
-        <hr />
+      <div class="skills">
+        <div><img src="/icons/html.png" alt="" /></div>
+        <div><img src="/icons/css.png" alt="" /></div>
+        <div><img src="/icons/js.png" alt="" /></div>
+        <div><img src="/icons/pngwing.com(1).png" alt="" /></div>
+      </div>
+    </section>
 
-        <!-- Project 1 -->
-        <div class="one">
-          <div class="box">
-            <a href="https://cdg341.github.io/Tip-Calculator/" target="_blank">
-              <img src="/project-images/desktop-design-completed.jpg" alt="" />
-            </a>
-            <h1>Tip Calculator</h1>
-            <p><em>Built with: HTML, CSS, Javascript</em></p>
-            <p>
-              Tip Calculator App for when you need to figure out how much you and your buddies are going to spend. Idea from
-              <a href="https://frontendmentor.io" target="_blank" style="text-decoration: none; color: aquamarine">FrontendMentor.io</a>
-            </p>
-            <a href="https://cdg341.github.io/Tip-Calculator/" target="_blank" class="buttons">Live</a>
-            <a href="https://github.com/cdg341/Tip-Calculator" target="_blank" class="buttons">Code</a>
-          </div>
-
-          <div class="box">
-            <a href="https://cdg341.github.io/rock-paper-scissors/" target="_blank">
-              <img src="/project-images/rock-paper-scissors.png" alt="" />
-            </a>
-            <h1>Rock Paper Scissors</h1>
-            <p><em>Built with: HTML, CSS, Javascript</em></p>
-            <p>We've all played rock, paper, scissors at some point. Will the odds be in your favor?</p>
-            <a href="https://cdg341.github.io/rock-paper-scissors/" target="_blank" class="buttons">Live</a>
-            <a href="https://github.com/cdg341/rock-paper-scissors" target="_blank" class="buttons">Code</a>
-          </div>
-
-          <div class="box">
-            <a href="https://cdg341.github.io/calculator/" target="_blank">
-              <img src="/project-images/calculator.png" alt="" />
-            </a>
-            <h1>Calculator</h1>
-            <p><em>Built with: HTML, CSS, Javascript</em></p>
-            <p>A calculator for when you need to bust out those calculations.</p>
-            <a href="https://cdg341.github.io/calculator/" target="_blank" class="buttons">Live</a>
-            <a href="https://github.com/cdg341/calculator" target="_blank" class="buttons">Code</a>
-          </div>
+    <!-- Project Section -->
+    <section class="projects container item scrollFade">
+      <h1>Projects</h1>
+      <hr />
+      <!-- First row of projects -->
+      <div class="layout">
+        <div class="box-container">
+          <a href="https://cdg341.github.io/Tip-Calculator/" target="_blank">
+            <img src="/project-images/desktop-design-completed.jpg" alt="" />
+          </a>
+          <h1>Tip Calculator</h1>
+          <p><em>Built with: HTML, CSS, Javascript</em></p>
+          <p>
+            Tip Calculator App for when you need to figure out how much you and your buddies are going to spend. Idea from
+            <a href="https://frontendmentor.io" target="_blank" style="text-decoration: none; color: aquamarine">FrontendMentor.io</a>
+          </p>
+          <a href="https://cdg341.github.io/Tip-Calculator/" target="_blank" class="buttons">Live</a>
+          <a href="https://github.com/cdg341/Tip-Calculator" target="_blank" class="buttons">Code</a>
         </div>
-
-        <!-- Project 2 -->
-        <!-- Project 3 -->
-
-        <!-- Project 4 -->
-        <div class="one">
-          <div class="box">
-            <a href="https://cdg341.github.io/landing-page/" target="_blank">
-              <img src="/project-images/odin-landing-page.png" alt="" />
-            </a>
-            <h1>Landing Page</h1>
-            <p><em>Built with: HTML & CSS</em></p>
-            <p>Nice looking landing page.</p>
-            <a href="https://cdg341.github.io/landing-page/" target="_blank" class="buttons">Live</a>
-            <a href="https://github.com/cdg341/landing-page" target="_blank" class="buttons">Code</a>
-          </div>
-
-          <div class="box">
-            <a href="https://cdg341.github.io/fylo-landing-page/" target="_blank">
-              <img src="/project-images/fylo-desktop-design.jpg" alt="" />
-            </a>
-            <h1>Fylo Landing Page</h1>
-            <p><em>Built with: HTML & CSS</em></p>
-            <p>
-              Landing page built with the idea from
-              <a href="https://frontendmentor.io" target="_blank" style="text-decoration: none; color: aquamarine">FrontendMentor.io</a>
-            </p>
-            <a href="https://cdg341.github.io/huddle-landing-page//" target="_blank" class="buttons">Live</a>
-            <a href="https://github.com/cdg341/huddle-landing-page" target="_blank" class="buttons">Code</a>
-          </div>
-
-          <div class="box">
-            <a href="https://cdg341.github.io/huddle-landing-page/" target="_blank">
-              <img src="/project-images/desktop-design.jpg" alt="" />
-            </a>
-            <h1>Huddle Landing Page</h1>
-            <p><em>Built with: HTML & CSS</em></p>
-            <p>
-              Landing page built with the idea from
-              <a href="https://frontendmentor.io" target="_blank" style="text-decoration: none; color: aquamarine">FrontendMentor.io</a>
-            </p>
-            <a href="https://cdg341.github.io/huddle-landing-page/" target="_blank" class="buttons">Live</a>
-            <a href="https://github.com/cdg341/huddle-landing-page" target="_blank" class="buttons">Code</a>
-          </div>
+        <div class="box-container">
+          <a href="https://cdg341.github.io/rock-paper-scissors/" target="_blank">
+            <img src="/project-images/rock-paper-scissors.png" alt="" />
+          </a>
+          <h1>Rock Paper Scissors</h1>
+          <p><em>Built with: HTML, CSS, Javascript</em></p>
+          <p>We've all played rock, paper, scissors at some point. Will the odds be in your favor?</p>
+          <a href="https://cdg341.github.io/rock-paper-scissors/" target="_blank" class="buttons">Live</a>
+          <a href="https://github.com/cdg341/rock-paper-scissors" target="_blank" class="buttons">Code</a>
+        </div>
+        <div class="box-container">
+          <a href="https://cdg341.github.io/calculator/" target="_blank">
+            <img src="/project-images/calculator.png" alt="" />
+          </a>
+          <h1>Calculator</h1>
+          <p><em>Built with: HTML, CSS, Javascript</em></p>
+          <p>A calculator for when you need to bust out those calculations.</p>
+          <a href="https://cdg341.github.io/calculator/" target="_blank" class="buttons">Live</a>
+          <a href="https://github.com/cdg341/calculator" target="_blank" class="buttons">Code</a>
         </div>
       </div>
-    </div>
-    <!-- Contact -->
-    <div class="contact">
+
+      <!-- Second row of projects -->
+      <div class="layout">
+        <div class="box-container">
+          <a href="https://cdg341.github.io/landing-page/" target="_blank">
+            <img src="/project-images/odin-landing-page.png" alt="" />
+          </a>
+          <h1>Landing Page</h1>
+          <p><em>Built with: HTML & CSS</em></p>
+          <p>Nice looking landing page.</p>
+          <a href="https://cdg341.github.io/landing-page/" target="_blank" class="buttons">Live</a>
+          <a href="https://github.com/cdg341/landing-page" target="_blank" class="buttons">Code</a>
+        </div>
+        <div class="box-container">
+          <a href="https://cdg341.github.io/fylo-landing-page/" target="_blank">
+            <img src="/project-images/fylo-desktop-design.jpg" alt="" />
+          </a>
+          <h1>Fylo Landing Page</h1>
+          <p><em>Built with: HTML & CSS</em></p>
+          <p>
+            Landing page built with the idea from
+            <a href="https://frontendmentor.io" target="_blank" style="text-decoration: none; color: aquamarine">FrontendMentor.io</a>
+          </p>
+          <a href="https://cdg341.github.io/huddle-landing-page//" target="_blank" class="buttons">Live</a>
+          <a href="https://github.com/cdg341/huddle-landing-page" target="_blank" class="buttons">Code</a>
+        </div>
+        <div class="box-container">
+          <a href="https://cdg341.github.io/huddle-landing-page/" target="_blank">
+            <img src="/project-images/desktop-design.jpg" alt="" />
+          </a>
+          <h1>Huddle Landing Page</h1>
+          <p><em>Built with: HTML & CSS</em></p>
+          <p>
+            Landing page built with the idea from
+            <a href="https://frontendmentor.io" target="_blank" style="text-decoration: none; color: aquamarine">FrontendMentor.io</a>
+          </p>
+          <a href="https://cdg341.github.io/huddle-landing-page/" target="_blank" class="buttons">Live</a>
+          <a href="https://github.com/cdg341/huddle-landing-page" target="_blank" class="buttons">Code</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
       <p>&copy;2022 - Cameron Gooch</p>
       <div>
         <a href="mailto: cdg341@gmail.com" target="_blank"><img src="/icons8-email-64(1).png" alt="" /></a>
         <a href="https://github.com/cdg341" target="_blank"><img src="/icons8-github-64.png" alt="" /></a>
       </div>
-    </div>
+    </section>
     <script src="script.js"></script>
-    <!-- <script src="/fade-in-out-on-scroll/assets/js/scrollfade-0.1.js"></script> -->
   </body>
 </html>

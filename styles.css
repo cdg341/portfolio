@@ -13,9 +13,10 @@ body {
   background-color: #111827;
 }
 
-header {
+/*------------------- Header section -------------------- */
+navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px 200px;
   position: fixed;
@@ -24,20 +25,21 @@ header {
   background-color: #1e2a44;
   width: 100%;
   top: 0;
+  z-index: 100;
 }
 
-header img {
+navbar img {
   width: 52px;
   padding: 0;
   margin: 0;
 }
 
-header a {
+navbar a {
   text-decoration: none;
   margin-right: 20px;
 }
 
-header a:hover {
+navbar a:hover {
   color: aquamarine;
   text-shadow: 0 0 10px lightgray;
   transition: ease-in;
@@ -51,24 +53,26 @@ header a:hover {
   margin-top: 140px;
 }
 
-.section-1 {
+/*------------------- About me section -------------------- */
+
+.my-name {
   text-align: center;
 }
 
-.section-1 h1 {
+.my-name h1 {
   font-size: 2.5rem;
 }
 
-.section-1 h2 {
+.my-name h2 {
   font-size: 1.8rem;
 }
 
-.section-1 span {
+.my-name span {
   color: aquamarine;
   font-size: 2.5rem;
 }
 
-.section-1 p {
+.my-name p {
   font-style: italic;
   margin: 20px 0;
 }
@@ -76,7 +80,7 @@ header a:hover {
 .about {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0 200px 0;
+  margin: 50px 0 10px 0;
 }
 
 .about-txt {
@@ -90,47 +94,30 @@ header a:hover {
   text-shadow: 0 0 10px lightgray;
 }
 
-#me {
-  width: 300px;
-}
-
-.one div p {
-  width: 300px;
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.one img {
-  margin-bottom: 30px;
-}
-
-p {
+.about-txt p {
   margin-top: 10px;
 }
 
-.box {
-  padding: 25px;
-  box-shadow: 0 0 5px gray;
-  border-radius: 8px;
+.profile-pic {
+  width: 300px;
 }
 
-.one {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
+/*------------------- Skills section -------------------- */
+.skills-header h1 {
+  font-size: 1.5rem;
+  color: aquamarine;
+  text-shadow: 0 0 10px lightgray;
+  margin: 0 auto;
 }
 
 .skills {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
-}
-
-.section-2 h1 {
-  font-size: 1.5rem;
-  color: aquamarine;
-  text-shadow: 0 0 10px lightgray;
-  margin-bottom: 10px;
+  background-color: rgb(86, 99, 112);
+  padding: 100px 0;
+  margin-top: -100px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .skills img {
@@ -140,6 +127,29 @@ p {
   border-radius: 8px;
   margin-right: 20px;
   box-shadow: 5px 5px 5px black;
+}
+
+/*------------------- Project section -------------------- */
+.layout {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.layout div p {
+  width: 300px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.layout img {
+  margin-bottom: 30px;
+}
+
+.box-container {
+  padding: 25px;
+  box-shadow: 0 0 5px black;
+  border-radius: 8px;
 }
 
 .projects > h1 {
@@ -153,19 +163,6 @@ p {
   margin-top: -15px;
 }
 
-.project-1,
-.project-4,
-.project-5,
-.project-6 {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 50px 0px;
-}
-
-.project-1 p:nth-child(2) {
-  margin-bottom: 5px;
-}
-
 .project-images p {
   width: 500px;
   margin-bottom: 10px;
@@ -176,12 +173,14 @@ p {
 .projects img {
   width: 300px;
   height: 170px;
-  border: 2px solid aquamarine;
+  border-radius: 8px;
+  transform: scale(1);
+  transition: 0.3s;
 }
 
 .projects img:hover {
-  transform: scale(1.1);
-  transition: 0.2s;
+  transform: scale(0.96);
+  transition: 0.3s;
 }
 
 .buttons {
@@ -202,6 +201,7 @@ p {
   box-shadow: 0 0 5px lightgray;
 }
 
+/*------------------- Contact section -------------------- */
 .contact {
   text-align: center;
   background-color: #1e2a44;
@@ -228,4 +228,24 @@ p {
 
 .contact p {
   margin: 0;
+}
+
+/* Scroll Fade In Effect */
+.scrollFade {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollFade--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scrollFade--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollFade--animate {
+  transition: opacity 0.9s;
 }
