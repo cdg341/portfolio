@@ -13,6 +13,13 @@ body {
   background-color: #111827;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80rem;
+  margin-top: 140px;
+}
+
 /*------------------- Header section -------------------- */
 navbar {
   display: flex;
@@ -46,15 +53,41 @@ navbar a:hover {
   transition-duration: 0.2s;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 40px;
-  width: 80rem;
-  margin-top: 140px;
+.menu {
+  margin-right: 50px;
+}
+
+a.icon {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 10px;
+}
+
+/*------------------- Media Query for navbar -------------------- */
+
+@media screen and (max-width: 900px) {
+  navbar {
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  navbar .menu {
+    display: none;
+  }
+  a.icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  navbar a {
+    display: block;
+  }
 }
 
 /*------------------- About me section -------------------- */
-
 .my-name {
   text-align: center;
 }
@@ -102,6 +135,38 @@ navbar a:hover {
   width: 300px;
 }
 
+/*------------------- Media Query About Section -------------------- */
+@media screen and (max-width: 900px) {
+  .container {
+    display: block;
+    width: auto;
+    padding: 25px;
+  }
+  #about-section {
+    margin-bottom: -80px;
+  }
+  .about {
+    display: block;
+    width: auto;
+  }
+  .about-txt {
+    width: auto;
+  }
+  .about-txt p {
+    font-size: 0.9rem;
+  }
+  .about-txt h1 {
+    text-align: center;
+    text-shadow: none;
+  }
+  .profile-pic {
+    margin: 0 auto;
+  }
+  .profile-pic img {
+    margin-top: 50px;
+  }
+}
+
 /*------------------- Skills section -------------------- */
 .skills-header h1 {
   font-size: 1.5rem;
@@ -125,8 +190,33 @@ navbar a:hover {
   border: 2px solid aquamarine;
   padding: 15px 50px;
   border-radius: 8px;
-  margin-right: 20px;
+  margin: 0 20px;
   box-shadow: 5px 5px 5px black;
+}
+
+.skills p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/*------------------- Media Query Skills Section -------------------- */
+@media screen and (max-width: 900px) {
+  .skills {
+    display: block;
+    text-align: center;
+  }
+  .skills-header h1 {
+    text-shadow: none;
+    text-align: center;
+  }
+  .skills img {
+    box-shadow: 0 0 15px black;
+    margin-left: 20px;
+  }
+  .skills p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
 }
 
 /*------------------- Project section -------------------- */
@@ -139,16 +229,18 @@ navbar a:hover {
 .layout div p {
   width: 300px;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .layout img {
   margin-bottom: 30px;
+  padding: 0;
 }
 
 .box-container {
   padding: 25px;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 20px black;
+  border: 1px solid aquamarine;
   border-radius: 8px;
 }
 
@@ -161,13 +253,6 @@ navbar a:hover {
   color: aquamarine;
   margin-bottom: 10px;
   margin-top: -15px;
-}
-
-.project-images p {
-  width: 500px;
-  margin-bottom: 10px;
-  padding: 0;
-  font-size: 16px;
 }
 
 .projects img {
@@ -199,6 +284,34 @@ navbar a:hover {
   cursor: pointer;
   transition: 0.2s;
   box-shadow: 0 0 5px lightgray;
+}
+
+/*------------------- Media Query Project Section -------------------- */
+@media screen and (max-width: 900px) {
+  .layout {
+    display: block;
+    text-align: center;
+  }
+  .layout p,
+  em {
+    font-size: 0.8rem;
+  }
+  .box-container img {
+    width: 275px;
+  }
+  .projects h1 {
+    text-shadow: none;
+    text-align: center;
+  }
+  .box-container {
+    box-shadow: none;
+    border: 1px solid aquamarine;
+    padding: 20px 10px;
+    margin-bottom: 15px;
+  }
+  .projects.container {
+    margin-top: 50px;
+  }
 }
 
 /*------------------- Contact section -------------------- */
@@ -247,5 +360,5 @@ navbar a:hover {
 }
 
 .scrollFade--animate {
-  transition: opacity 0.9s;
+  transition: opacity 2s;
 }

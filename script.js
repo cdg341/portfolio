@@ -2,10 +2,11 @@ const about = document.querySelector("a");
 const skills = document.querySelector("a:nth-child(2)");
 const projects = document.querySelector("a:nth-child(3)");
 const contact = document.querySelector("a:nth-child(4)");
+const toggle = document.querySelector("a:nth-child(5)");
 
 //Functions to scroll when clicking on menu link
 about.addEventListener("click", () => {
-  document.querySelector(".my-name").scrollIntoView({ behavior: "smooth", block: "end" });
+  document.querySelector("#about-section").scrollIntoView({ behavior: "smooth", block: "end" });
 });
 skills.addEventListener("click", () => {
   document.querySelector(".skills").scrollIntoView({ behavior: "smooth", block: "end" });
@@ -16,9 +17,11 @@ projects.addEventListener("click", () => {
 contact.addEventListener("click", () => {
   document.querySelector(".contact").scrollIntoView({ behavior: "smooth", block: "start" });
 });
+toggle.addEventListener("click", () => {
+  document.querySelector(".menu").scrollIntoView({ behavior: "smooth" });
+});
 
-// ScrollFade 0.1
-
+// ScrollFade
 let fadeElements = document.getElementsByClassName("scrollFade");
 
 function scrollFade() {
@@ -48,8 +51,22 @@ function scrollFade() {
   }
 }
 
-document.addEventListener("scroll", scrollFade);
-window.addEventListener("resize", scrollFade);
-document.addEventListener("DOMContentLoaded", function () {
-  scrollFade();
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 375) {
+    document.addEventListener("scroll", scrollFade);
+    window.addEventListener("resize", scrollFade);
+    document.addEventListener("DOMContentLoaded", function () {
+      scrollFade();
+    });
+  }
 });
+
+//Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.querySelector(".menu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
