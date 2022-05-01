@@ -309,9 +309,9 @@ a.icon {
     padding: 20px 10px;
     margin-bottom: 15px;
   }
-  .projects.container {
-    margin-top: 50px;
-  }
+}
+.projects.container {
+  margin-top: 50px;
 }
 
 /*------------------- Contact section -------------------- */

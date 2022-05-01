@@ -22,7 +22,7 @@ toggle.addEventListener("click", () => {
 });
 
 // ScrollFade
-let fadeElements = document.getElementsByClassName("scrollFade");
+/* let fadeElements = document.getElementsByClassName("scrollFade");
 
 function scrollFade() {
   let viewportBottom = window.scrollY + window.innerHeight;
@@ -51,15 +51,16 @@ function scrollFade() {
   }
 }
 
-window.addEventListener("resize", function () {
-  if (window.innerWidth > 375) {
-    document.addEventListener("scroll", scrollFade);
+if (window.innerWidth > 900) {
+  document.addEventListener("scroll", scrollFade);
+  document.addEventListener("DOMContentLoaded", function () {
+    scrollFade();
+  });
+} else {
+  window.addEventListener("resize", function () {
     window.addEventListener("resize", scrollFade);
-    document.addEventListener("DOMContentLoaded", function () {
-      scrollFade();
-    });
-  }
-});
+  });
+} */
 
 //Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction() {
