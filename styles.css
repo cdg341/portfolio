@@ -130,9 +130,12 @@ a.icon {
 .about-txt p {
   margin-top: 10px;
 }
-
 .profile-pic {
-  width: 300px;
+  text-align: center;
+}
+
+.profile-pic img {
+  box-shadow: 20px 25px #1e2a44;
 }
 
 /*------------------- Media Query About Section -------------------- */
