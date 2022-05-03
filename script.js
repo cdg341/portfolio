@@ -12,7 +12,7 @@ skills.addEventListener("click", () => {
   document.querySelector(".skills").scrollIntoView({ behavior: "smooth", block: "end" });
 });
 projects.addEventListener("click", () => {
-  document.querySelector(".projects").scrollIntoView({ behavior: "smooth", block: "start" });
+  document.getElementById("projectHeader").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 contact.addEventListener("click", () => {
   document.querySelector(".contact").scrollIntoView({ behavior: "smooth", block: "start" });
