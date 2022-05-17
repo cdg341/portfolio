@@ -136,6 +136,7 @@ a.icon {
 
 .profile-pic img {
   box-shadow: 20px 25px #1e2a44;
+  border-radius: 8px;
 }
 
 /*------------------- Media Query About Section -------------------- */
